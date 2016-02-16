@@ -1,0 +1,24 @@
+.close {
+  float: right;
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+.close:after,
+.close:before {
+  width: 36px;
+  height: 1px;
+  content: '';
+  position: absolute;
+  background-color: #fff;
+  top: 50%;
+  display: block;
+}
+.close:before {
+  transform: translate3d(0, -50%, 0) rotate(45deg);
+  -webkit-transform: translate3d(0, -50%, 0) rotate(45deg);
+}
+.close:after {
+  transform: translate3d(0, -50%, 0) rotate(-45deg);
+  -webkit-transform: translate3d(0, -50%, 0) rotate(-45deg);
+}
