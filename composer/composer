@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+composer create-project slim/slim-skeleton slim
+composer create-project cakephp/app cakephp
+composer create-project laravel/laravel laravel
+composer create-project laravel/lumen lumen
+composer create-project pagekit/pagekit pagekit
+composer create-project wordpress/wordpress wordpress

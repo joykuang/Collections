@@ -13,6 +13,21 @@
 
     };
     
+    var templates = {
+        base: (function(){
+            
+        }),
+        head: (function(){
+            
+        }),
+        body: (function(){
+            
+        }),
+        foot: (function(){
+            
+        })
+    };
+    
     // 对话框
     D.dialog = function(){
         
