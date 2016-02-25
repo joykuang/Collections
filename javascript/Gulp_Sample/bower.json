@@ -1,0 +1,32 @@
+{
+  "name": "gulp-sample",
+  "description": "The sample of gulp",
+  "main": "",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "sample"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "^2.1.22",
+    "PreloadJS": "^0.6.2",
+    "gsap": "^1.18.2",
+    "SoundJS": "^0.6.2",
+    "EaselJS": "^0.8.2",
+    "TweenJS": "^0.6.2",
+    "uikit": "^2.25.0"
+  }
+}
