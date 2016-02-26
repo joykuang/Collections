@@ -4,7 +4,10 @@ uglify = require('gulp-uglify'),
 //less = require('gulp-less'),
 //uglifycss = require('gulp-uglifycss'),
 concat = require('gulp-concat'),
-// strip = require('gulp-strip-comments'),
+strip = require('gulp-strip-comments'),
+//uncomment = require('gulp-uncomment'),
+uncomment = require('gulp-uncomment-it'),
+//strip = require('gulp-strip-code'),
 pkg = require('./package.json');
 
 /*
@@ -16,7 +19,6 @@ gulp-open
 gulp-sass
 */
 
-//var src = './src/**/*.js';
 /*
 var src = [
     "zepto.js",
@@ -81,6 +83,9 @@ var copyright = ['/*!',
 gulp.task('combined', function() {
     gulp.src(src)
     .pipe(concat(output))
+    /*.pipe(strip({
+        safe: false
+    }))*/
     .pipe(header(copyright, {
         pkg: pkg
     }))
@@ -88,26 +93,18 @@ gulp.task('combined', function() {
 });
 
 // 压缩 JS
-gulp.task('uglifyjs', ['combined'], function() {
+var u_name = output.replace(/\.js$/, '.min.js'),
+u_head = copyright.replace(/\n\n$/, '');
+gulp.task('uglifyjs', function() {
     gulp.src(dist + output)
     .pipe(uglify())
-    .pipe(concat(output.replace(/\.js$/, '.min.js')))
-    .pipe(header(copyright.replace(/\n\n$/, ''), {
+    .pipe(concat(u_name))
+    .pipe(header(u_head, {
         pkg: pkg
     }))
     .pipe(gulp.dest(dist));
 });
 
-/*gulp.task('uglifycss', function () {
-  gulp.src('*.css')
-    .pipe(uglifycss({
-      "maxLineLen": 80,
-      "uglyComments": true
-    }))
-    .pipe(gulp.dest('./dist/'));
-});*/
-
-gulp.task('default', ['uglifyjs'], function(done){
-    
+gulp.task('default', ['combined', 'uglifyjs'], function(done){
     done();
 });

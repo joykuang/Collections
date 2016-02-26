@@ -11,20 +11,18 @@
     "TweenJS": "latest",
     "SoundJS": "latest",
     "PreloadJS": "latest",
-    "blueimp-file-upload": "^9.11.2",
-    "blueimp-gallery": "^2.17.0",
-    "blueimp-md5": "^2.1.0",
-    
+    "blueimp-file-upload": "latest",
+    "blueimp-gallery": "latest",
+    "blueimp-md5": "latest",
     "AdminLTE": "admin-lte#latest",
     "ckeditor": "latest",
     "ckeditor-dev": "latest",
     "kindeditor": "latest",
     "quill": "latest",
     "canjs": "latest",
-    
     "jquery-cycle2": "latest",
     "datatables.net": "latest",
     "datatables.net-dt": "latest",
-    "jquery-validation": "latest"
+    "jquery-validation": "^1.15.0"
   }
 }
